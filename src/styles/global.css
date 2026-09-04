@@ -1,0 +1,90 @@
+*:not(dialog) {
+  margin: 0;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  min-block-size: 100svb;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  background: #e8e8e8;
+  color: #212121;
+  font-family: system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-size-adjust: from-font;
+  letter-spacing: -0.03ch;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+a {
+  color: currentColor;
+}
+
+summary {
+  position: relative;
+}
+summary::marker {
+  content: none;
+}
+summary::before,
+summary::after {
+  content: "";
+}
+summary::before,
+summary::after {
+  width: 0.75em;
+  height: 0;
+  border-bottom: 2px solid;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  transform: translateY(-50%);
+}
+summary::after {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+[open] summary::after {
+  transform: rotate(0deg);
+}
+
+details {
+  border: 1px solid;
+  padding: 0 1rem;
+  background: white;
+}
+details + details {
+  border-top: none;
+}
+details[open] {
+  padding-bottom: 1em;
+}
+
+summary {
+  padding: 1rem 2em 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.wrapper {
+  margin-inline: auto;
+  inline-size: min(100% - 2.5rem, 70ch);
+}
