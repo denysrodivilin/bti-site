@@ -37,90 +37,94 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Styles & Scripts -->
   </head>
   <body>
     <Header />
     <main id="main">
-      <section class="hero-section region">
-        <div class="wrapper">
-          <h1>Допомога з документами на нерухомість з 1996 року</h1>
+      <section class="hero region">
+        <div class="wrapper flow">
+          <h1 class="hero-header">Допомога з документами на нерухомість з 1996 року</h1>
           <p class="hero-lede">Працюємо з приватними клієнтами, бізнесом, державними та комунальними установами</p>
-        </div>
-      </section>
-
-      <section class="feature-section">
-        <div class="wrapper">
-          <h2>Сучасний підхід до послуг БТІ</h2>
-          <ul role="list">
-            <li>Консультація від експерта в офісах, телефоном або онлайн</li>
-            <li>Можливість доставки документів Новою поштою</li>
-            <li>Всі документи мають електронну версію доступну за QR-кодом</li>
+          <ul class="feature-list" role="list">
+            <li class="feature-item yellow">Консультація від експерта в офісах, телефоном або онлайн</li>
+            <li class="feature-item orange">Можливість доставки документів Новою поштою</li>
+            <li class="feature-item red">Всі документи мають електронну версію доступну за QR-кодом</li>
           </ul>
         </div>
       </section>
 
-      <section class="service-section region" id="service-section">
-        <div class="wrapper">
+      <section class="service region" id="service">
+        <div class="wrapper flow">
           <h2>Наші послуги</h2>
-          <ul role="list">
-            <li>Виготовлення технічних паспортів</li>
-            <li>
+          <ul class="service-list" role="list">
+            <li class="service-item">Виготовлення технічних паспортів</li>
+            <li class="service-item">
               Надання довідок та технічних висновків: зміна площі, складу майна, можливість поділу або виділу, знищення
               тощо
             </li>
-            <li>Узаконення перепланувань та реконструкцій</li>
-            <li>Надання архівних довідок про підтвердження державної реєстрації прав власності до 2013 року</li>
-            <li>Відновлення втрачених документів</li>
-            <li>Оцінка нерухомого майна</li>
+            <li class="service-item">Узаконення перепланувань та реконструкцій</li>
+            <li class="service-item">
+              Надання архівних довідок про підтвердження державної реєстрації прав власності до 2013 року
+            </li>
+            <li class="service-item">Відновлення втрачених документів</li>
+            <li class="service-item">Оцінка нерухомого майна</li>
           </ul>
         </div>
       </section>
 
-      <section class="contact-section region" id="contact-section">
-        <div class="wrapper">
+      <section class="contact region" id="contact">
+        <div class="wrapper flow">
           <h2>Офіси в м. Камʼянське та районі</h2>
-          <ul role="list">
+          <ul class="contact-list" role="list">
             <li>
-              <article class="card">
-                <h3 class="card-title">Головний офіс</h3>
+              <article class="contact-card">
+                <h3 class="contact-card-title">Головний офіс</h3>
                 <p>Камʼянське, вул. Соборна, 7</p>
-                <p>Понеділок – пʼятниця, 9:00 – 16:00, без перерви</p>
-                <p>+380 (96) 167 28 45</p>
+                <p>Понеділок–пʼятниця, 9:00–16:00, без перерви</p>
+                <p><a href="tel:+380961672845">+380 (96) 167 28 45</a></p>
               </article>
-              <article class="card">
-                <h3 class="card-title">Пʼятихатський офіс</h3>
+            </li>
+            <li>
+              <article class="contact-card">
+                <h3 class="contact-card-title">Пʼятихатський офіс</h3>
                 <p>Пʼятихатки, вул. Тиха, 117</p>
-                <p>Понеділок – пʼятниця, 8:00 – 17:00, перерва 12:00 – 13:00</p>
-                <p>+380 (97) 323 99 67</p>
+                <p>Понеділок–пʼятниця, 8:00–17:00, перерва 12:00 – 13:00</p>
+                <p><a href="tel:+380973239967">+380 (97) 323 99 67</a></p>
               </article>
-              <article class="card">
-                <h3 class="card-title">Жовтоводський офіс</h3>
+            </li>
+            <li>
+              <article class="contact-card">
+                <h3 class="contact-card-title">Жовтоводський офіс</h3>
                 <p>Жовті Води, вул. Березнева, 40А</p>
-                <p>Понеділок – пʼятниця, 9:00 – 17:00, без перерви</p>
-                <p>+380 (97) 323 99 67</p>
+                <p>Понеділок–пʼятниця, 9:00–17:00, без перерви</p>
+                <p><a href="tel:+380973239967">+380 (97) 323 99 67</a></p>
               </article>
-              <article class="card">
-                <h3 class="card-title">Криничанський офіс</h3>
+            </li>
+            <li>
+              <article class="contact-card">
+                <h3 class="contact-card-title">Криничанський офіс</h3>
                 <p>Кринички, вул. Виконкомівська, 5</p>
-                <p>Понеділок – пʼятниця, 9:00 – 17:00, без перерви</p>
-                <p>+380 (97) 323 99 67</p>
+                <p>Понеділок–пʼятниця, 9:00–17:00, без перерви</p>
+                <p><a href="tel:+380973239967">+380 (97) 323 99 67</a></p>
               </article>
-              <article class="card">
-                <h3 class="card-title">Верхньодніпровський офіс</h3>
+            </li>
+            <li>
+              <article class="contact-card">
+                <h3 class="contact-card-title">Верхньодніпровський офіс</h3>
                 <p>Верхньодніпровськ, вул. Театральна, 16</p>
-                <p>Понеділок – пʼятниця, 9:00 – 17:00, без перерви</p>
-                <p>+380 (97) 323 99 67</p>
+                <p>Понеділок–пʼятниця, 9:00–17:00, без перерви</p>
+                <p><a href="tel:+380973239967">+380 (97) 323 99 67</a></p>
               </article>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="faq-section region" id="faq-section">
-        <div class="wrapper">
+      <section class="faq region" id="faq">
+        <div class="wrapper flow">
           <h2>Поширені запитання</h2>
           <details>
             <summary>Скільки коштують ваші послуги?</summary>
