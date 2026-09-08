@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
 import { Font } from "astro:assets";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Header from "../components/SiteHeader.astro";
+import Footer from "../components/SiteFooter.astro";
 
 const siteURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL("/og-image.png", Astro.site);
@@ -13,7 +13,6 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     <!-- Primary Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="only light" />
     <title>Камʼянське районне БТІ | Офіційний сайт</title>
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
@@ -46,7 +45,7 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
     <main id="main">
       <section class="hero region">
         <div class="wrapper flow">
-          <h1 class="hero-header">Допомога з документами на нерухомість з 1996 року</h1>
+          <h1 class="hero-header">Допомога з документами на нерухомість <em>з 1996 року</em></h1>
           <p class="hero-lede">Працюємо з приватними клієнтами, бізнесом, державними та комунальними установами</p>
           <ul class="feature-list" role="list">
             <li class="feature-item yellow">Консультація від експерта в офісах, телефоном або онлайн</li>

@@ -1,0 +1,178 @@
+*:not(dialog) {
+  margin: 0;
+}
+
+html {
+  font-size: var(--font-size-base);
+  scrollbar-gutter: stable;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  @media (prefers-reduced-motion: no-preference) {
+    interpolate-size: allow-keywords;
+    &:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+body {
+  min-block-size: 100svb;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  background: var(--color-canvas);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size-adjust: from-font;
+  line-height: var(--leading-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+:is(h1, h2, h3) {
+  max-inline-size: var(--measure-compact);
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-compact);
+  line-height: var(--leading-compact);
+  text-wrap: balance;
+}
+
+h1,
+.h1 {
+  font-size: var(--xxx-large);
+}
+
+h2,
+.h2 {
+  font-size: var(--xx-large);
+}
+
+h3,
+.h3 {
+  font-size: var(--large);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+sub,
+sup {
+  line-height: 0;
+}
+
+ul,
+ol {
+  padding-inline-start: 2ch;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+a {
+  color: currentColor;
+  text-underline-offset: 2px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+:is(code, kbd, samp) {
+  font-family: var(--font-mono);
+  tab-size: 2;
+  box-decoration-break: clone;
+}
+
+@supports not (font-size-adjust: from-font) {
+  :is(code, kbd, samp) {
+    font-size: 0.95em;
+  }
+}
+
+table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums lining-nums slashed-zero;
+}
+
+th,
+td {
+  border: 1px solid;
+  padding: 0.25em 0.5em;
+  vertical-align: top;
+  text-align: start;
+}
+
+:is(img, iframe, audio, video, svg, canvas, embed, object) {
+  display: block;
+  max-inline-size: 100%;
+}
+
+:is(img, video, svg, canvas) {
+  block-size: auto;
+}
+
+audio {
+  inline-size: 100%;
+}
+
+svg {
+  fill: currentColor;
+}
+
+figure {
+  margin-inline: auto;
+  inline-size: fit-content;
+}
+
+figcaption {
+  contain: inline-size;
+  font-size: var(--font-size-s);
+}
+
+:is(input, select, textarea, button) {
+  font: inherit;
+  font-size: max(16px, 1em);
+}
+
+input,
+textarea {
+  --focus-ring-width: 4px;
+  --focus-ring-color: var(--color-highlight);
+  --focus-ring-offset: 0;
+
+  inline-size: 100%;
+  border: 2px solid;
+  border-radius: 0;
+  padding: 0.25em 0.75em;
+}
+
+textarea:not([rows]) {
+  min-block-size: 5lh;
+  resize: vertical;
+}
+
+fieldset,
+iframe {
+  border: none;
+}
+
+:focus-visible {
+  outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+[hidden]:not([hidden="until-found"]) {
+  display: none !important ;
+}
+
+mark,
+::selection {
+  background: var(--color-highlight);
+  color: var(--color-text);
+}
