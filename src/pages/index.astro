@@ -1,51 +1,55 @@
 ---
-import "../styles/global.css";
-import { Font } from "astro:assets";
 import Header from "../components/SiteHeader.astro";
 import Footer from "../components/SiteFooter.astro";
+import "../styles/new.css";
+import { Font } from "astro:assets";
 
 const siteURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = new URL("/og-image.png", Astro.site);
+const ogImageURL = new URL("/og-image.webp", Astro.site);
 ---
 
-<html dir="ltr" lang="uk-UA">
+<html lang="uk-UA">
   <head>
-    <!-- Primary Tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Камʼянське районне БТІ | Офіційний сайт</title>
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- Custom Fonts -->
+    <!-- Fonts -->
     <Font cssVariable="--font-literata" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <!-- SEO -->
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Камʼянське РБТІ: технічні паспорти, довідки, узаконення та оцінка нерухомості з 1996 року. 5 офісів у районі."
+    />
     <link rel="canonical" href={siteURL} />
+
     <meta property="og:locale" content="uk_UA" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Камʼянське районне БТІ | Офіційний сайт" />
-    <meta property="og:description" content="" />
+    <meta
+      property="og:description"
+      content="Камʼянське РБТІ: технічні паспорти, довідки, узаконення та оцінка нерухомості з 1996 року. 5 офісів у районі."
+    />
     <meta property="og:url" content={siteURL} />
     <meta property="og:site_name" content="Камʼянське РБТІ" />
+
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="675" />
-    <meta property="og:image:type" content="image/png" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <!-- Styles & Scripts -->
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/webp" />
   </head>
   <body>
     <Header />
     <main id="main">
       <section class="hero region">
         <div class="wrapper flow">
-          <h1 class="hero-header">Допомога з документами на нерухомість <em>з 1996 року</em></h1>
+          <h1 class="hero-header">
+            Допомога з документами на нерухомість <em>з 1996 року</em>
+          </h1>
           <p class="hero-lede">Працюємо з приватними клієнтами, бізнесом, державними та комунальними установами</p>
           <ul class="feature-list" role="list">
             <li class="feature-item yellow">Консультація від експерта в офісах, телефоном або онлайн</li>
@@ -83,7 +87,9 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
                 <h3 class="contact-card-title">Головний офіс</h3>
                 <p>Камʼянське, вул. Соборна, 7</p>
                 <p>Понеділок–пʼятниця, 9:00–16:00, без перерви</p>
-                <p><a href="tel:+380961672845">+380 (96) 167 28 45</a></p>
+                <p>
+                  <a href="tel:+380961672845">+380 (96) 167 28 45</a>
+                </p>
               </article>
             </li>
             <li>
@@ -91,7 +97,9 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
                 <h3 class="contact-card-title">Пʼятихатський офіс</h3>
                 <p>Пʼятихатки, вул. Тиха, 117</p>
                 <p>Понеділок–пʼятниця, 8:00–17:00, перерва 12:00 – 13:00</p>
-                <p><a href="tel:+380973239967">+380 (97) 323 99 67</a></p>
+                <p>
+                  <a href="tel:+380973239967">+380 (97) 323 99 67</a>
+                </p>
               </article>
             </li>
             <li>
@@ -99,7 +107,9 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
                 <h3 class="contact-card-title">Жовтоводський офіс</h3>
                 <p>Жовті Води, вул. Березнева, 40А</p>
                 <p>Понеділок–пʼятниця, 9:00–17:00, без перерви</p>
-                <p><a href="tel:+380973239967">+380 (97) 323 99 67</a></p>
+                <p>
+                  <a href="tel:+380973239967">+380 (97) 323 99 67</a>
+                </p>
               </article>
             </li>
             <li>
@@ -107,7 +117,9 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
                 <h3 class="contact-card-title">Криничанський офіс</h3>
                 <p>Кринички, вул. Виконкомівська, 5</p>
                 <p>Понеділок–пʼятниця, 9:00–17:00, без перерви</p>
-                <p><a href="tel:+380973239967">+380 (97) 323 99 67</a></p>
+                <p>
+                  <a href="tel:+380973239967">+380 (97) 323 99 67</a>
+                </p>
               </article>
             </li>
             <li>
@@ -115,7 +127,9 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
                 <h3 class="contact-card-title">Верхньодніпровський офіс</h3>
                 <p>Верхньодніпровськ, вул. Театральна, 16</p>
                 <p>Понеділок–пʼятниця, 9:00–17:00, без перерви</p>
-                <p><a href="tel:+380973239967">+380 (97) 323 99 67</a></p>
+                <p>
+                  <a href="tel:+380973239967">+380 (97) 323 99 67</a>
+                </p>
               </article>
             </li>
           </ul>
@@ -156,9 +170,9 @@ const ogImageURL = new URL("/og-image.png", Astro.site);
             </p>
           </details>
           <details>
-            <summary
-              >Чи обовʼязково вносити техпаспорт до Єдиної державної електронної системи у сфері будівництва (ЄДЕССБ)?</summary
-            >
+            <summary>
+              Чи обовʼязково вносити техпаспорт до Єдиної державної електронної системи у сфері будівництва (ЄДЕССБ)?
+            </summary>
             <p>
               Так, на сьогодні це обовʼязкова умова виготовлення технічного паспорта, відповідно до Постанови КМУ № 681
               від 23.06.2021 та Постанови КМУ № 488 від 12.05.2023. Органи державної влади, нотаріуси та державні

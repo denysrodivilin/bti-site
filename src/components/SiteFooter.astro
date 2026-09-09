@@ -2,20 +2,11 @@
 const year = new Date().getFullYear();
 ---
 
-<footer class="region">
-  <div class="wrapper repel">
+<footer class="region" data-space="tight">
+  <div class="wrapper repel" data-width="wide">
     <p>
       &copy; 1996–{year} Камʼянське РБТІ. Код ЄДРПОУ 03341859
     </p>
-    <p><a href="mailto:kamenrbti@gmail.com">kamenrbti@gmail.com</a></p>
+    <a href="mailto:kamenrbti@gmail.com">kamenrbti@gmail.com</a>
   </div>
 </footer>
-
-<style>
-  footer {
-    --region-space: 1.5rem;
-
-    background: #353535;
-    color: #fff;
-  }
-</style>

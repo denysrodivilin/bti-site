@@ -3,12 +3,6 @@
   --font-display: var(--font-base);
   --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
 
-  --font-size-s: var(--step--1);
-  --font-size-m: var(--step-0);
-  --font-size-l: var(--step-2);
-  --font-size-xl: var(--step-3);
-  --font-size-2xl: var(--step-4);
-
   --font-size-base: clamp(1em, 16px + 0.5vi, 1.25em);
 
   --scale: 1.2;
@@ -43,10 +37,13 @@
   --size-5xl: 2em;
   --size-6xl: 3em;
 
+  --gutter: var(--size-m);
+
   --weight-regular: 400;
   --weight-bold: 700;
 
-  --tracking-compact: -0.04ch;
+  --tracking-base: 0;
+  --tracking-display: -0.04ch;
 
   --leading-flat: 1;
   --leading-compact: 1.2;
@@ -55,19 +52,15 @@
   --measure-compact: 35ch;
   --measure-longform: 65ch;
 
-  --gutter: var(--space-s-m);
-
+  --radius-s: 0.5rem;
   --radius-full: calc(infinity * 1px);
 
-  --focus-ring-width: 2px;
-  --focus-ring-style: solid;
+  --focus-ring-width: medium;
+  --focus-ring-style: dashed;
   --focus-ring-color: currentColor;
   --focus-ring-offset: 4px;
 
-  --color-black: black;
-  --color-white: white;
-
-  --color-canvas: #fff;
+  --color-canvas: #f7f7f7;
   --color-surface: #eee;
   --color-text: #121212;
   --color-text-subtle: #343434;

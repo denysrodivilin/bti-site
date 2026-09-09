@@ -1,6 +1,6 @@
-<header class="region">
+<header class="region" data-space="tight">
   <a class="skip-link" href="#main">До основного вмісту</a>
-  <div class="wrapper repel">
+  <div class="wrapper repel" data-width="wide">
     <a class="site-logo" href="/">Камʼянське районне БТІ</a>
     <nav aria-label="Головне меню">
       <ul class="cluster" role="list">
@@ -9,32 +9,6 @@
         <li><a href="#faq">Питання та відповіді</a></li>
       </ul>
     </nav>
+    <a href="mailto:kamenrbti@gmail.com">kamenrbti@gmail.com</a>
   </div>
 </header>
-
-<style>
-  header {
-    --region-space: 1.5rem;
-
-    background: #353535;
-    color: #fff;
-  }
-
-  .skip-link {
-    --focus-ring-offset: -4px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-100%);
-
-    padding: 0.5em 1em;
-    background: var(--color-canvas);
-    color: var(--color-text);
-    text-decoration: none;
-  }
-
-  .skip-link:focus-visible {
-    transform: translateY(0);
-  }
-</style>
